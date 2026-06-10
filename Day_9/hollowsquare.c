@@ -1,23 +1,24 @@
 #include <stdio.h>
 
-int main() {
-    int n, i, j;
+// function to find maximum
+int findMax(int a, int b)
+{
+    if(a > b)
+        return a;
+    else
+        return b;
+}
 
-    printf("Enter size of square ");
-    scanf("%d", &n);
+int main()
+{
+    int x, y, max;
 
-    for(i = 1; i <= n; i++) {
-        for(j = 1; j <= n; j++) {
-            if(i == 1 || i == n || j == 1 || j == n)
-              
-            
-                printf("* ");
-            
-            else
-                printf("  ");
-        }
-        printf("\n");
-    }
+    printf("Enter two numbers: ");
+    scanf("%d %d", &x, &y);
+
+    max = findMax(x, y);
+
+    printf("Maximum number is: %d\n", max);
 
     return 0;
 }
